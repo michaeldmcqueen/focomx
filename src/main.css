@@ -1,0 +1,1031 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/base";
+ */
+@tailwind base;
+
+/**
+ * This injects any component classes registered by plugins.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/components";
+ */
+@tailwind components;
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
+
+input {
+  @apply border border-gray-500;
+}
+input {
+  border-width: 0;
+  border-color: #a0aec0;
+  padding: .5rem .5rem;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  color: #163962;
+
+}
+#edit-submit {
+  -webkit-appearance: none;
+  background: #1d98d3;
+  padding: .5rem 1rem;
+  border: 0;
+  border-radius: 2px;
+  margin: 0 1rem 1rem 0;
+  font-weight: 700;
+}
+
+select {
+  color: black;
+}
+.block,
+.node {
+  @apply mb-4;
+}
+
+.content p,
+.content ul,
+.content ol {
+  @apply mb-4 leading-normal;
+}
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/utilities";
+ */
+@tailwind utilities;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "utilities/background-patterns";
+ * @import "utilities/skew-transforms";
+ */
+body {
+  min-height: 100vh;
+  background-image: url(/sites/all/themes/focomx/images/bg.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.container--small {
+  max-width: 640px;
+}
+.copy {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+.heading {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.alt-heading {
+  font-family: 'Anton', sans-serif;
+}
+
+.site-logo {
+  width: 60px;
+}
+
+.field-name-body h1,
+.field-name-body h2,
+.field-name-body h3,
+.field-name-body h4,
+.field-name-body h5,
+.field-name-body h6 {
+  margin-bottom: 1rem;
+}
+
+.field-name-body a {
+  text-decoration: underline;
+}
+p a {
+  text-decoration: underline;
+}
+.front .group-third .bg-red a {
+  border-bottom: 2px solid;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 23px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+@media (min-width: 1024px) {
+  .site-logo {
+    width: 100px;
+  }
+}
+
+.home-tagline {
+  font-size: 4rem;
+}
+
+@media (min-width: 768px) {
+  .home-tagline {
+    font-size: 6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-tagline {
+    font-size: 5rem;
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .event-details {
+    width: 50%;
+  }
+}
+
+.group-third a:before {
+  font-family: 'Archivo Black', sans-serif;
+  content: 'play the festival';
+  display: block;
+  text-decoration: none;
+  font-size: 1rem;
+  text-align: center;
+  color: #000;
+  text-decoration: none;
+}
+
+#navigation {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+  -moz-transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+  transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  #navigation {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+.menu-open #navigation {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+div.messages {
+  max-width: 1280px;
+  margin: 10px auto;
+}
+
+.tabs ul.primary {
+  margin: 1rem 0;
+  border: 0;
+  padding: 0 0 2rem;
+}
+
+.tabs ul.primary li {
+  display: inline-block;
+}
+
+.tabs ul.primary li a {
+  margin-right: 1rem;
+  background: transparent;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 700;
+  border: 1px solid #fff;
+}
+
+.tabs ul.primary li.active a {
+  background-color: #ffb802;
+  border: 1px solid #ffb700;
+  border-bottom: 1px solid #ffb802;
+}
+
+.node-artist-form,
+.page-user form,
+.page-user .tabs {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.node-artist-form .form-item,
+.page-user form .form-item {
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+
+.node-artist-form .form-item .form-item,
+.page-user form .form-item .form-item {
+  margin-bottom: 0;
+}
+
+.node-artist-form .form-item input,
+.page-user form .form-item input {
+  padding: 10px;
+  border-radius: 3px;
+  color: #15191A;
+  width: 100%;
+}
+
+.node-artist-form .form-item label,
+.page-user form .form-item label {
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.node-artist-form input[type="submit"],
+.page-user form input[type="submit"] {
+  -webkit-appearance: button;
+  padding: 12px 22px;
+  background: #1C99D3;
+  font-weight: 700;
+}
+
+.node-artist-form .form-item .description {
+  font-size: 0.85em;
+  margin-bottom: 1rem;
+}
+
+.node-artist-form .group-music-section h3 {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  border-top: 15px solid #1C99D3;
+  padding-top: 2rem;
+}
+
+.node-artist-form select {
+  color: #15191A;
+}
+
+.node-artist-form .filter-guidelines {
+  padding: 0;
+}
+
+form .field-multiple-table td.field-multiple-drag a.tabledrag-handle {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  margin-left: 0;
+}
+
+a.tabledrag-handle .handle {
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  width: 26px;
+}
+
+.tickets .addeventatc {
+  background: none;
+  border: 0px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: normal;
+  padding: 0px;
+  box-shadow: none !important;
+  z-index: 0 !important;
+}
+
+.tickets .addeventatc:hover {
+  font-size: inherit;
+  background: none;
+  border-bottom: 2px solid;
+}
+
+.tickets .addeventatc .addeventatc_icon {
+  display: none;
+}
+
+
+.node-artist.view-mode-full .field {
+  padding-bottom: 1rem;
+
+}
+.node-artist.view-mode-full .field-name-title {
+  padding: 0;
+}
+.node-artist.view-mode-full .field-name-title h1 {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  line-height: 1;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.node-artist.view-mode-full .field-name-field-genre {
+  font-size: 1.1rem;
+  background:
+    #fff;
+  color:
+    #173962;
+  padding: .4rem 1rem;
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 2px;
+}
+.node-artist.view-mode-full .field-name-field-threeword {
+}
+
+.node-artist.view-mode-full .field-name-field-photo img {
+  background:
+  #15191a;
+  padding: 2rem;
+  border: 10px solid #1d98d3;
+  margin-bottom: 2rem;
+}
+
+.node-artist.view-mode-full p, .node-artist.view-mode-full li{
+  background: none;
+  color: #ffffff !important;
+}
+
+.view-id-show_block.view-display-id-block_3 {
+  background: #ffb801;
+  color: #173863;
+  font-weight: normal;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.view-id-show_block.view-display-id-block_3  h4 {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+.node-artist.view-mode-full .field-name-field-photo img {
+  float: right;
+  background: #15191a;
+  padding: 2rem;
+  border: 10px solid #1d98d3;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+}
+.node-artist.view-mode-full .field-name-field-facebook, .node-artist.view-mode-full .field-name-field-artist-website, .node-artist.view-mode-full .field-name-field-artist-twitter {
+  font-family: 'Anton';
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-decoration: underline;
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+#block-views-band-submissions-block > h2 {
+  font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+#block-views-band-submissions-block .views-field-title {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+#block-views-band-submissions-block .view-empty a {
+  background-color: #1d98d3;
+  border: 1px solid #1d98d3;
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 700;
+  color: #000;
+
+}
+
+#block-views-user-login-view-block > h2, #block-views-user-login-view-block-1 > h2 {
+  font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+#block-views-user-login-view-block .views-field-title h2, #block-views-user-login-view-block-1 .views-field-title h2 {
+  font-family: 'Archivo Black', sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+#block-views-user-login-view-block .views-field-edit-node a, #block-views-user-login-view-block-1 .views-field-edit-node a {
+  background-color: #1d98d3;
+  border: 1px solid #1d98d3;
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 700;
+  color: #000;
+
+}
+#block-views-user-login-view-block  .view-empty, #block-views-user-login-view-block-1  .view-empty {
+  padding: 2rem 0;
+  border-top: 1px solid #1d98d3;
+}
+#block-views-user-login-view-block  .view-empty a , #block-views-user-login-view-block-1  .view-empty a {
+  background-color: #1d98d3;
+  border: 1px solid #1d98d3;
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: 700;
+  color: #000;
+
+}
+#block-views-user-login-view-block-1  {
+  margin-bottom: 7rem;
+
+}
+#block-views-user-login-view-block .views-row, 
+#block-views-user-login-view-block-1 .views-row {
+  padding: 2rem 0;
+  border-top: 1px solid #1d98d3;
+}
+@media (min-width: 768px) {
+  #block-views-user-login-view-block .views-row, #block-views-user-login-view-block-1 .views-row {
+    display: flex;
+    align-items: center;
+  }
+}
+#block-views-user-login-view-block .views-field-edit-node, #block-views-user-login-view-block-1 .views-field-edit-node {
+  margin-left: auto;
+}
+.logged-in .logged-out-submissions-link {
+  display: none;
+}
+.not-logged-in .logged-in-submissions-link {
+  display: none;
+}
+
+.view-booking-view .views-exposed-widgets {
+  margin-bottom: 2rem;
+}
+.view-booking-view .views-exposed-widgets input, .view-booking-view .views-exposed-widgets select {
+  color: #000;
+}
+.view-booking-view .views-exposed-widgets input {
+  padding: 0.4rem 1rem;
+  border: 0;
+  border-radius: 3px;
+}
+.view-booking-view .views-exposed-widgets .form-submit {
+  background: #1C99D3;
+  border: 0;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.node-unpublished {
+  background-color: transparent;
+  border-top: 15px solid #ff0000;
+  margin-top: 3rem;
+  padding-top: 2rem;
+}
+
+
+/* Volunteer Schedule */
+.volunteer-schedule .view-grouping {
+  padding: 2rem 0;
+}
+.volunteer-schedule .view-grouping-header {
+  font-size: 2.4rem;
+  font-family: 'Archivo Black', sans-serif;
+  padding-bottom: 3rem;
+border-top: 1px solid #1699d6;
+margin-top: 2rem;
+padding-top: 2rem;
+}
+.volunteer-schedule .view-grouping-header span {
+  font-size: 1rem;
+  vertical-align: middle;
+  border: 2px solid;
+  border-radius: 50%;
+  margin-left: 1rem;
+  padding: 1rem .5rem;
+}
+.volunteer-schedule .view-grouping-content .views-row {
+  padding: 1rem;
+  background: #fff;
+  color: black;
+}
+.volunteer-schedule .view-grouping-content .views-row.position-filled {
+  background: rgba(255, 255, 255, 0.25);
+}
+.volunteer-schedule .view-grouping-content  h3 {
+  font-weight: normal;
+  font-size: 35px;
+  margin-bottom: 1rem;
+}
+
+.volunteer-schedule .views-field.views-field-field-volunteer {
+  color: #ffb801;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: 0.4rem;
+}
+.volunteer-schedule .view-grouping-content .views-row .views-field-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.volunteer-schedule .volunteer-schedule-listing-wrap {
+  margin-bottom: 3rem;
+
+}
+@media (min-width: 768px) {
+  .volunteer-schedule .volunteer-schedule-listing-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  .volunteer-schedule .view-grouping-content  h3 {
+    float: left;
+    width: 200px;
+    font-size: 35px;
+    margin: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .volunteer-schedule .volunteer-schedule-listing-wrap {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.flag-volunteer a {
+    background: #1d98d3;
+    padding: .9rem 1.75rem;
+    color: #fff;
+    margin: 2rem 0 0;
+    display: inline-block;
+    border-radius: 2px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.flag-volunteer a.unflag-action{
+  background: #F44336;
+  font-size: 1rem;
+}
+
+.page-flag #edit-submit {
+  -webkit-appearance: none;
+  background: #1d98d3;
+  padding: .5rem 1rem;
+  border: 0;
+  border-radius: 2px;
+  margin: 0 1rem 1rem 0;
+  font-weight: 700;
+}
+
+
+.faq--item {
+  padding-bottom: 1rem;
+}
+
+.faq--question {
+  padding: 1.25rem 3.5rem 1.25rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all .3s ease-in-out;
+
+}
+.faq--question:after {
+      content: '';
+      background-image: url('/sites/all/themes/focomx/images/faq-close.svg');
+      position: absolute;
+      right: 1rem;
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      top: 1.5rem;
+    }
+.faq--question h6 {
+  margin: 0;
+}
+.faq--question h6 span{
+  font-weight: 500;
+}
+.faq--answer {
+  padding: 1rem 3.5rem 0.5rem 1.5rem;
+}
+.faq--answer.faq--answer--closed {
+  display: none;
+}
+.faq-item--open .faq--answer--closed {
+      display: block;
+}
+.faq-item--open .faq--question {
+  background: rgba(0, 0, 0, 0.5);
+
+}
+
+
+/* Schedule */
+.schedule-listing-wrap {
+  border-top: 1px solid #1c99d3;
+  padding: 2rem 0;
+}
+.schedule .schedule-time {
+  font-size: 35px;
+  margin-bottom: 1rem;
+}
+.schedule .schedule-listing-items .views-row {
+  border-radius: 0 20px 0 0;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .schedule .schedule-listing-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+  .schedule .schedule-listing-items .views-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .schedule .schedule-listing-items .views-row  .views-field-view-node-1 {
+    margin-top: auto;
+  }
+  .schedule .schedule-time {
+    float: left;
+    width: 200px;
+    font-size: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .schedule .schedule-listing-items {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.schedule-listing-items .flag-attending {
+  position: absolute;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  bottom: 22px;
+  background: #fff;
+  border-radius: 20px;
+  text-align: center;
+}
+.schedule-listing-items .flag-attending a {
+  font-size: 0;
+  background: white;
+  height: 28px;
+  width: 28px;
+  position: absolute;
+  border-radius: 20px;
+  background-image: url(/sites/all/themes/focomx/images/add-to.svg);
+  background-size: 28px;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* padding: 10px; */
+  text-align: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.schedule-listing-items .flag-attending a.unflag-action {
+  background-image: url(/sites/all/themes/focomx/images/add-to-check.svg);
+}
+  .schedule-listing-items .flag-attending  span.flag-throbber {
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: -3px;
+}
+
+
+.page-schedule .views-exposed-widgets fieldset {
+    height: auto !important;
+}
+.page-schedule .views-exposed-widgets fieldset legend {
+  background: #FFB800;
+  font-weight: 700;
+  width: 100%;
+}
+.page-schedule .views-exposed-widgets .fieldset-legend span.summary {
+  display: none;
+}
+.page-schedule .views-exposed-widgets fieldset legend a.fieldset-title {
+  padding: 1rem 1rem 1rem 2rem;
+  display: inline-block;
+  width: 100%;
+}
+
+.page-schedule .views-exposed-widgets fieldset.collapsible .fieldset-legend {
+  background-image: url(/sites/all/themes/focomx/images/arrow-down.svg) !important;
+  background-position: 15px 50% !important;
+}
+.page-schedule .views-exposed-widgets fieldset.collapsed .fieldset-legend {
+  background-image: url(/sites/all/themes/focomx/images/arrow.svg) !important;
+  background-position: 15px 50% !important;
+}
+
+.page-schedule .views-exposed-widgets  .fieldset-wrapper {
+      position: absolute;
+    background: #121d29;
+    z-index: 9;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 3px 8px 15px rgba(0,0,0,0.5);
+    font-size: 0.95rem;
+}
+.page-schedule .views-exposed-widgets .fieldset-wrapper  .bef-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-schedule .views-exposed-widgets .fieldset-wrapper  .bef-checkboxes .form-item{
+  padding: 0 1rem 0.25rem 0;
+}
+.page-schedule .bef-checkboxes a.bef-toggle {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.page-schedule .views-exposed-form label {
+  font-weight: normal !important;
+}
+.page-schedule .views-exposed-form .views-exposed-widget {
+  display: block;
+  width: 100%;
+  float: none;
+  padding: 0 0 1rem;
+}
+.page-schedule.page-schedule-friday #pagetitle, .page-schedule-saturday  #pagetitle {
+  text-align: center;
+  font-size: 46px !important;
+  font-weight: normal;
+  line-height: 1.1;
+    margin-bottom: 3rem;
+} 
+.page-schedule-saturday  #pagetitle:before,.page-schedule-friday  #pagetitle:before {
+  content: 'Schedule';
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 800;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .page-schedule.page-schedule-friday #pagetitle, .page-schedule-saturday  #pagetitle {
+    font-size: 60px !important;
+  } 
+  .page-schedule .views-exposed-widgets  {
+    display: flex;
+      justify-content: space-around;
+      margin: -1rem 0 2rem;
+  }
+  
+  .page-schedule .views-exposed-form .views-exposed-widget {
+    padding: .5em 1em 0 0;
+  }
+
+}
+.page-schedule .views-submit-button {
+  display: none !important;
+
+}
+.page-schedule .views-exposed-widgets .fieldset-wrapper .bef-toggle {
+  display: inline-block;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+
+
+.page-venues .view-id-venues .view-content .views-row .views-field.views-field-title {
+  background: #1699d6;
+  padding: 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.page-venues .view-id-venues .view-content .views-row .views-field.views-field-field-age-limit {
+  background: #1e242d;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  /* font-weight: 700; */
+}
+.page-venues .view-id-venues .view-content .views-row .views-field-field-logo {
+  background: #fff;
+  padding: 1rem;
+}
+.page-venues .view-id-venues .view-content  {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+@media (min-width: 768px) {
+  .page-venues .view-id-venues .view-content  {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .page-venues .view-id-venues .view-content  {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+
+  }
+}
+
+/* Line Up */
+
+.page-lineup .view-id-lineup .view-content .views-row .views-field.views-field-title {
+  background: #1699d6;
+  padding: 1rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.page-lineup .view-id-lineup .view-content .views-row .views-field.views-field-field-genre {
+  background: #1e242d;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  /* font-weight: 700; */
+}
+.page-lineup .view-id-lineup .view-content .views-row .views-field-field-photo {
+  padding: 0;
+  background: #FFF;
+}
+.page-lineup .view-id-lineup .view-content  {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+@media (min-width: 768px) {
+  .page-lineup .view-id-lineup .view-content  {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .page-lineup .view-id-lineup .view-content  {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+
+  }
+}
+
+
+
+.node-venue.view-mode-full {
+  margin-bottom: 2rem;
+}
+
+.node-venue.view-mode-full .group-right .field {
+  font-size: 1.4rem;
+} 
+.node-venue.view-mode-full .group-right .field-type-link-field {
+  display: inline-block;
+  padding-right: 1rem;
+    padding-top: 1rem;
+}
+.node-venue.view-mode-full .group-right .field-name-field-age-limit {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+.node-venue.view-mode-full .group-right .field-type-link-field a{
+  font-size: 1.25rem;
+  text-decoration: underline;
+  font-weight: 700;
+}
+.node-venue.view-mode-full .field-name-field-logo {
+  background-color: #fff;
+  padding:2rem;
+  border-radius: 4px;
+}
+.node-type-venue .schedule-listing-items .views-field.views-field-field-genre {
+  margin-top: auto;
+}
+@media (min-width: 992px) {
+  .node-venue.view-mode-full {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .node-venue.view-mode-full {
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2rem;
+  }
+}
+
+.views-table {
+  width: 100%;
+  margin-top: 1rem;
+}
+.views-table td {
+  padding: 0.5rem;
+}
+.views-table td.views-field-title {
+  font-weight: 700;
+}
+
+
+#block-views-volunteer-info1-block {
+  padding: 1rem;
+    background: #fff;
+    border-radius: 4px;
+    border-bottom: 10px solid #1c99d3;
+}
+#block-views-volunteer-info1-block .view-header p {
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  #block-views-volunteer-info1-block {
+    float: right;
+    width: 300px;
+  }
+}
+
+#block-views-volunteer-info1-block-4 .flag-volunteer a  {
+  margin: 0;
+}

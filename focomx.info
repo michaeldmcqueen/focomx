@@ -1,0 +1,15 @@
+name = focomx
+description = focomx theme for Drupal 7 with Tailwind CSS.
+core = 7.x
+stylesheets[all][] = dist/main.css
+scripts[] = js/script.js
+
+
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[content] = Content
+regions[postscript] = Postscript
+regions[footer] = Footer
+regions[help] = Help
+regions[sidebar_first] = Left sidebar
+regions[sidebar_second] = Right sidebar
